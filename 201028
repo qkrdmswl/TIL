@@ -1,0 +1,46 @@
+# WEEK 9
+<String method>
+
+1. .concat()
+String s = new String("HELLO");
+String t = s.concat("JAVA");
+print(t)
+>> HELLOJAVA
+
+2. String[] split(String regex)
+regex 중심으로 분리하고 배열에 저장하여 리턴
+
+3. int compareTo(String anotherString)
+  1 문자열 같으면 0
+  2 문자열이 anotherString 보다 사전에 먼저 나오면 음수 리턴
+  3 문자열이 anotherString 보다 사전에 나중에 나오면 양수 리턴
+
+4. 그 외 알아둘 것
+toUpperCase() / toLowerCase() / trim() -> 앞뒤 공백 제거 후 리턴 (단, 문자열 사이 공백은 x)
+char charAt(int index) / int length()
+
+
+<StringBuffer>
+가변적 문자열 관리 : append, delete, reverse 등 이용하여 자유자재로 문자열 수정
+  1 StringBuffer append(String str)
+  2 StringBuffer append(String sb)
+  3 StringBuffer delete(int start, int end)  // 단, end 앞까지 삭제
+  4 StringBuffer insert(int offset, String str) 
+  5 StringBuffer replace(int start, int end, String str)
+  6 StringBuffer reverse()
+  7 void setLength(int newLength)
+
+
+<StringTokenizer>
+Stirng query = "name=kitae&addr=seoul&age=21";
+StringTokenizer st = new StringTokenizer(query, "&")
+
+st --> name=kitae    // 토큰 1
+       addr=seoul    // 토큰 2
+       age=21        // 토큰 3
+       
+  1 int countTokens()
+  2 boolean hasMoreTokens()   // StringTokenizeer 에 다음 토큰이 있으면 true 리턴
+  3 String nexToken()         // StringTokenizer 에 들어있는 다음 토큰 리턴
+  
+       
